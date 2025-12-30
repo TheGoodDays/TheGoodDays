@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Gooddays 305 · Miami's Premier Sound & Vision House</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="The Gooddays 305 is Miami's premier sound & vision house: recording studios, cyc wall, content space, event space, amenities and more."
+  />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg-dark: #050608;
+      --bg-section: #101319;
+      --bg-card: #171a22;
+      --accent-orange: #ff7a3c;
+      --accent-yellow: #ffc857;
+      --accent-teal: #1cc7c4;
+      --accent-red: #ff445b;
+      --accent-green: #49c87a;
+      --text-main: #f5f5f6;
+      --text-muted: #a3a7b5;
+      --border-soft: rgba(255, 255, 255, 0.06);
+      --radius-xl: 24px;
+      --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.6);
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Smooth scrolling for nav links */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      color: var(--text-main);
+      background: radial-gradient(circle at top, #181b24 0, #040507 55%, #000 100%);
+      background-size: 200% 200%;
+      animation: bgDrift 20s ease-in-out infinite alternate;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    @keyframes bgDrift {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 100% 100%;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(
+        to bottom,
+        rgba(5, 6, 8, 0.96),
+        rgba(5, 6, 8, 0.72),
+        transparent
+      );
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      padding: 0.75rem 0.25rem;
+    }
+
+    .logo-lockup {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      background: linear-gradient(
+        135deg,
+        var(--accent-red),
+        var(--accent-orange),
+        var(--accent-yellow)
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .logo-main {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+    }
+
+    .logo-sub {
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: none;
+      gap: 1.25rem;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-muted);
+    }
+
+    .nav-links a {
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.35rem;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(
+        90deg,
+        var(--accent-teal),
+        var(--accent-yellow),
+        var(--accent-orange)
+      );
+      transition: width 0.18s ease-out;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(15, 18, 24, 0.94);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent-green);
+      box-shadow: 0 0 10px var(--accent-green);
+    }
+
+    .btn-primary {
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 600;
+      background: linear-gradient(
+        120deg,
+        var(--accent-teal),
+        var(--accent-yellow),
+        var(--accent-orange)
+      );
+      color: #050608;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7);
+      white-space: nowrap;
+      transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, filter 0.12s ease-out;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.9);
+      filter: brightness(1.05);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0) scale(0.98);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 3.5rem 0 3rem;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-card {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-soft);
+      background:
+        radial-gradient(circle at top left, rgba(255, 200, 87, 0.12), transparent 55%),
+        radial-gradient(circle at top right, rgba(76, 207, 203, 0.18), transparent 60%),
+        radial-gradient(circle at bottom, rgba(255, 69, 90, 0.22), transparent 60%),
+        rgba(10, 11, 15, 0.96);
+      box-shadow: var(--shadow-soft);
+      padding: 1.6rem 1.4rem 1.6rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s ease-out,
+                  box-shadow 0.2s ease-out,
+                  border-color 0.2s ease-out,
+                  background 0.25s ease-out;
+    }
+
+    .hero-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.85);
+      border-color: rgba(255, 255, 255, 0.18);
+      background:
+        radial-gradient(circle at top left, rgba(255, 200, 87, 0.15), transparent 55%),
+        radial-gradient(circle at top right, rgba(76, 207, 203, 0.22), transparent 60%),
+        radial-gradient(circle at bottom, rgba(255, 69, 90, 0.25), transparent 60%),
+        rgba(10, 11, 15, 0.98);
+    }
+
+    .hero-stripes {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.3rem;
+      display: flex;
+      gap: 0.35rem;
+      opacity: 0.95;
+    }
+
+    .hero-stripe {
+      width: 9px;
+      height: 54px;
+      border-radius: 999px;
+      box-shadow: 0 0 18px rgba(0, 0, 0, 0.6);
+      animation: stripePulse 3.2s ease-in-out infinite alternate;
+    }
+
+    .hero-stripe:nth-child(1) {
+      background: var(--accent-orange);
+    }
+    .hero-stripe:nth-child(2) {
+      background: var(--accent-yellow);
+      animation-delay: 0.2s;
+    }
+    .hero-stripe:nth-child(3) {
+      background: var(--accent-teal);
+      animation-delay: 0.4s;
+    }
+    .hero-stripe:nth-child(4) {
+      background: var(--accent-red);
+      animation-delay: 0.6s;
+    }
+
+    @keyframes stripePulse {
+      0% {
+        transform: translateY(0);
+        opacity: 0.9;
+        filter: brightness(1);
+      }
+      100% {
+        transform: translateY(-6px);
+        opacity: 1;
+        filter: brightness(1.15);
+      }
+    }
+
+    .eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent-teal);
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-title {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-size: 2rem;
+      line-height: 1.08;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-tagline {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 32rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-tagline strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.78rem;
+    }
+
+    .hero-chip-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.18rem;
+    }
+
+    .hero-chip-value {
+      color: #ffffff;
+      font-weight: 500;
+    }
+
+    .hero-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    .hero-badge {
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(5, 6, 8, 0.7);
+      color: var(--text-muted);
+    }
+
+    .hero-badge span {
+      color: var(--accent-yellow);
+      font-weight: 600;
+    }
+
+    .hero-socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .hero-socials a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border-radius: 999px;
+      padding: 0.3rem 0.7rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .hero-social-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent-teal);
+    }
+
+    .hero-photo {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-soft);
+      min-height: 260px;
+      background:
+        linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+        url("assets/images/tgd-entrance.jpg") center / cover no-repeat;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s ease-out,
+                  box-shadow 0.2s ease-out,
+                  border-color 0.2s ease-out,
+                  background-position 10s ease-out;
+      background-position: center;
+    }
+
+    .hero-photo:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.9);
+      border-color: rgba(255, 255, 255, 0.18);
+      background-position: center top;
+    }
+
+    .hero-photo-note {
+      position: absolute;
+      left: 1rem;
+      bottom: 1rem;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 0.4rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    /* SECTION STYLES */
+
+    section {
+      padding: 2.6rem 0;
+    }
+
+    .section-header {
+      margin-bottom: 1.7rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.6rem;
+    }
+
+    .section-kicker {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: var(--accent-teal);
+    }
+
+    .section-title {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .section-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      max-width: 30rem;
+    }
+
+    .banded {
+      background: radial-gradient(circle at top, #13151d 0, #050608 60%);
+    }
+
+    .section-split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 1.8rem;
+      align-items: flex-start;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-soft);
+      padding: 1.5rem 1.4rem;
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.2s ease-out,
+                  box-shadow 0.2s ease-out,
+                  border-color 0.2s ease-out,
+                  background 0.25s ease-out;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.85);
+      border-color: rgba(255, 255, 255, 0.18);
+      background:
+        radial-gradient(circle at top left, rgba(255, 200, 87, 0.12), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(76, 207, 203, 0.12), transparent 55%),
+        #171a22;
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 0.75rem;
+    }
+
+    .card p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-bottom: 0.7rem;
+    }
+
+    .pill-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .price-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 0.8rem;
+      font-size: 0.86rem;
+    }
+
+    .price-pill {
+      border-radius: 999px;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(6, 7, 10, 0.9);
+    }
+
+    .price-pill strong {
+      color: var(--accent-yellow);
+    }
+
+    .feature-list {
+      list-style: none;
+      display: grid;
+      gap: 0.4rem;
+      margin: 0.5rem 0 0.8rem;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .feature-list li {
+      position: relative;
+      padding-left: 1.1rem;
+    }
+
+    .feature-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent-teal);
+    }
+
+    .cta-inline {
+      margin-top: 0.9rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .cta-inline a {
+      color: var(--accent-teal);
+      font-weight: 500;
+    }
+
+    /* GRID SECTIONS */
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.6rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border-radius: 999px;
+      padding: 0.3rem 0.8rem;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .tag-accent {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent-orange);
+    }
+
+    .gear-cols {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 1.4rem;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .gear-list {
+      list-style: none;
+      display: grid;
+      gap: 0.3rem;
+      margin-top: 0.4rem;
+    }
+
+    .gear-list li {
+      position: relative;
+      padding-left: 0.95rem;
+    }
+
+    .gear-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-yellow);
+    }
+
+    /* AMENITIES GRID */
+
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.6rem;
+    }
+
+    .amenity-card h4 {
+      font-size: 0.92rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 0.35rem;
+    }
+
+    .amenity-card p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    /* CONTACT / FOOTER */
+
+    .contact-card {
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .contact-title {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 0.6rem;
+    }
+
+    .contact-text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      max-width: 26rem;
+      margin: 0 auto 1.3rem;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      justify-content: center;
+      margin-bottom: 1.3rem;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .contact-details span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .contact-details .icon-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent-teal);
+    }
+
+    footer {
+      border-top: 1px solid var(--border-soft);
+      padding: 1.3rem 0 1.7rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.8rem;
+      align-items: center;
+    }
+
+    .footer-stripes {
+      display: flex;
+      gap: 0.35rem;
+    }
+
+    .footer-stripe {
+      width: 12px;
+      height: 12px;
+      border-radius: 4px;
+    }
+
+    .footer-stripe:nth-child(1) {
+      background: var(--accent-orange);
+    }
+    .footer-stripe:nth-child(2) {
+      background: var(--accent-yellow);
+    }
+    .footer-stripe:nth-child(3) {
+      background: var(--accent-teal);
+    }
+    .footer-stripe:nth-child(4) {
+      background: var(--accent-red);
+    }
+
+    /* REVEAL ANIMATIONS */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-stagger > * {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+    }
+
+    .reveal-stagger.visible > * {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-stagger.visible > *:nth-child(1) { transition-delay: 0.05s; }
+    .reveal-stagger.visible > *:nth-child(2) { transition-delay: 0.1s; }
+    .reveal-stagger.visible > *:nth-child(3) { transition-delay: 0.15s; }
+    .reveal-stagger.visible > *:nth-child(4) { transition-delay: 0.2s; }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 860px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 2.6rem;
+      }
+
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-photo {
+        order: -1;
+        min-height: 220px;
+      }
+
+      .hero-title {
+        font-size: 1.7rem;
+      }
+
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .section-split {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .grid-2 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .gear-cols {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .amenities-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .nav-cta {
+        gap: 0.35rem;
+      }
+
+      .pill {
+        display: none; /* keep mobile header clean */
+      }
+    }
+
+    @media (min-width: 861px) {
+      .nav-links {
+        display: flex;
+      }
+
+      .hero {
+        padding: 4.1rem 0 3.5rem;
+      }
+
+      .hero-card {
+        padding: 1.9rem 1.8rem 1.8rem;
+      }
+
+      .hero-title {
+        font-size: 2.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- HEADER -->
+    <header>
+      <div class="container">
+        <nav class="nav">
+          <div class="logo-lockup">
+            <div class="logo-mark">GD</div>
+            <div class="logo-text">
+              <div class="logo-main">The Gooddays 305</div>
+              <div class="logo-sub">Miami's Premier Sound &amp; Vision House</div>
+            </div>
+          </div>
+
+          <div class="nav-links">
+            <a href="#cyc-wall">Cyc Wall</a>
+            <a href="#event-space">Event Space</a>
+            <a href="#studios">Studios</a>
+            <a href="#services">Services</a>
+            <a href="#amenities">Amenities</a>
+          </div>
+
+          <div class="nav-cta">
+            <div class="pill">
+              <span class="pill-dot"></span>
+              Now Booking Sessions
+            </div>
+            <a href="mailto:hiroshima@thegooddays305.com?subject=Booking%20Inquiry%20-%20The%20Gooddays">
+              <button class="btn-primary">Book a Day</button>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <div class="container">
+          <div class="hero-inner">
+            <div class="hero-card reveal">
+              <div class="hero-stripes">
+                <div class="hero-stripe"></div>
+                <div class="hero-stripe"></div>
+                <div class="hero-stripe"></div>
+                <div class="hero-stripe"></div>
+              </div>
+
+              <div class="eyebrow">Welcome to The Gooddays 305</div>
+              <h1 class="hero-title">Miami's premier sound &amp; vision house.</h1>
+              <p class="hero-tagline">
+                Welcome to The Gooddays 305, where the <strong>sound is right</strong> and the
+                <strong>execution is flawless</strong>. Located in the heart of Miami, we are the
+                creative ecosystem built for heavy hitters and top-tier talent—from record labels
+                and sync companies to A&amp;Rs, artist managers, and the creators themselves. We
+                combine timeless aesthetic and character with cutting-edge professional standards to
+                give your art the platform it deserves.
+              </p>
+
+              <div class="hero-grid">
+                <div>
+                  <div class="hero-chip-label">Address</div>
+                  <div class="hero-chip-value">
+                    1761 NW 21st Terrace<br />
+                    Miami, FL 33142
+                  </div>
+                </div>
+                <div>
+                  <div class="hero-chip-label">Contact</div>
+                  <div class="hero-chip-value">
+                    <!-- <a href="tel:19175494765">917.549.4765</a><br /> -->
+                    <a href="mailto:hiroshima@thegooddays305.com">hiroshima@thegooddays305.com</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-footer">
+                <div class="hero-badge">
+                  Built for <span>artists, labels &amp; creators</span>
+                </div>
+                <div class="hero-socials">
+                  <a
+                    href="https://www.instagram.com/TheGoodDays305"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="hero-social-dot"></span>
+                    @TheGoodDays305
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-photo reveal" aria-label="Inside The Gooddays studio">
+              <!-- Replace image URL in CSS or here with your own hero image -->
+              <div class="hero-photo-note">Miami, FL · Sessions by appointment only</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CYC WALL -->
+      <section class="banded" id="cyc-wall">
+        <div class="container reveal-stagger">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">Creative content space</div>
+              <h2 class="section-title">The Cyc Wall</h2>
+            </div>
+            <p class="section-subtitle">
+              Need clean visuals? Our 25x25 cyc wall is ready for your next photo shoot,
+              interview, music video, or content filming.
+            </p>
+          </div>
+
+          <div class="section-split">
+            <div class="card">
+              <span class="tag">
+                <span class="tag-accent"></span>
+                All-inclusive block deals · Custom packages
+              </span>
+
+              <h3>Rental Rates</h3>
+              <p>
+                The Cyc Wall is a dedicated creative content space set up for high-impact visuals,
+                from artist press shots to full-scale production days.
+              </p>
+
+              <div class="pill-label">Standard Rate</div>
+              <div class="price-row">
+                <div class="price-pill">
+                  <strong>$300/hr</strong> &nbsp;·&nbsp; 2-hour minimum
+                </div>
+              </div>
+
+              <p class="pill-label">Photography Services</p>
+              <p>
+                Need a photographer? We got you. Inquire for a custom quote on our in-house
+                photography services for campaigns, covers, and content.
+              </p>
+
+              <p class="cta-inline">
+                For all-inclusive block deals and custom packages,&nbsp;
+                <a href="mailto:hiroshima@thegooddays305.com?subject=Cyc%20Wall%20Booking">
+                  please inquire within.
+                </a>
+              </p>
+            </div>
+
+            <div
+              class="hero-photo"
+              style="
+                min-height: 260px;
+                background-image:
+                  linear-gradient(135deg, rgba(0,0,0,0.5), rgba(0,0,0,0.1)),
+                  url('assets/images/cyc-wall.jpg');
+              "
+            >
+              <!-- Replace cyc-wall.jpg with a cyc wall shot -->
+              <div class="hero-photo-note">25x25 Cyc Wall · Photo &amp; video ready</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EVENT SPACE -->
+      <section id="event-space">
+        <div class="container reveal-stagger">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">Event Space</div>
+              <h2 class="section-title">Host it right here.</h2>
+            </div>
+            <p class="section-subtitle">
+              Host your next industry event, mixer, or private gathering. Our space is adaptable
+              and fully loaded.
+            </p>
+          </div>
+
+          <div class="section-split">
+            <div class="card">
+              <div class="pill-label">Features</div>
+              <ul class="feature-list">
+                <li>DJ booth with full sound system &amp; hook-ups.</li>
+                <li>Dedicated “VIP” section for special guests and key talent.</li>
+                <li>Fully equipped kitchen, perfect for private chefs or catering.</li>
+              </ul>
+
+              <p class="cta-inline">
+                Tell us the vision. For a custom quote on your next event,&nbsp;
+                <a href="mailto:hiroshima@thegooddays305.com?subject=Event%20Space%20Inquiry">
+                  please inquire within.
+                </a>
+              </p>
+            </div>
+
+            <div
+              class="hero-photo"
+              style="
+                min-height: 260px;
+                background-image: linear-gradient(
+                    135deg,
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.1)
+                  ),
+                  url('assets/images/event-space.jpg');
+              "
+            >
+              <!-- Replace event-space.jpg with a wide shot of the event space -->
+              <div class="hero-photo-note">Industry events · Listening sessions · Mixers</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STUDIOS -->
+      <section class="banded" id="studios">
+        <div class="container reveal-stagger">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">Recording Studios</div>
+              <h2 class="section-title">Studio A &amp; Studio B</h2>
+            </div>
+            <p class="section-subtitle">
+              Two rooms, one standard: professional, release-ready sound for modern records.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <!-- Studio A -->
+            <div class="card">
+              <span class="tag">
+                <span class="tag-accent"></span>
+                Studio A · Spatial Atmos Room
+              </span>
+              <h3>Studio A &middot; This is where the magic goes spatial.</h3>
+              <p>
+                Designed for next-gen immersive mixes and world-class playback, Studio A translates
+                from Atmos to stereo with authority.
+              </p>
+
+              <div class="pill-label">Tech Highlights</div>
+              <ul class="feature-list">
+                <li>Next-gen Atmos setup with Rednet system.</li>
+                <li>PMC 6-2s, PMC Ci65s, and Dutch &amp; Dutch speakers.</li>
+                <li>Mac M4, Pro Tools &amp; full plugin suite.</li>
+              </ul>
+
+              <div class="pill-label">Rates</div>
+              <div class="price-row">
+                <div class="price-pill">
+                  <strong>$150/hr</strong> &nbsp;·&nbsp; Studio rate (w/o engineer)
+                </div>
+                <div class="price-pill">
+                  <strong>$300/hr</strong> &nbsp;·&nbsp; Studio rate (with engineer)
+                </div>
+              </div>
+
+              <p class="cta-inline">
+                Time block deals available—please inquire within for custom rates on extended
+                blocks.
+              </p>
+            </div>
+
+            <!-- Studio B -->
+            <div class="card">
+              <span class="tag">
+                <span class="tag-accent"></span>
+                Studio B · Solid Mixes
+              </span>
+              <h3>Studio B &middot; The trusted sweet spot for solid mixes.</h3>
+              <p>
+                Studio B is dialed for mixing, production, and vocal tracking sessions that need a
+                reliable, honest room.
+              </p>
+
+              <div class="pill-label">Tech Highlights</div>
+              <ul class="feature-list">
+                <li>Lynx Aurora (n) converter.</li>
+                <li>PMC TB2s+ powered by a Bryston 4B SST amp.</li>
+                <li>Focal Alpha 8s for additional reference.</li>
+                <li>Mac M4, Pro Tools &amp; full plugin suite.</li>
+              </ul>
+
+              <div class="pill-label">Rates</div>
+              <div class="price-row">
+                <div class="price-pill">
+                  <strong>$75/hr</strong> &nbsp;·&nbsp; Studio rate (w/o engineer)
+                </div>
+                <div class="price-pill">
+                  <strong>$225/hr</strong> &nbsp;·&nbsp; Studio rate (with engineer)
+                </div>
+              </div>
+
+              <p class="cta-inline">
+                Time block deals available—please inquire within for custom rates on extended
+                blocks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GEAR LIST -->
+      <section id="gear">
+        <div class="container reveal">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">Available Gear</div>
+              <h2 class="section-title">Mic Locker &amp; Outboard</h2>
+            </div>
+            <p class="section-subtitle">
+              From modern tube royalty to rare custom builds, the Gooddays gear list is curated to
+              capture character and clarity.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="gear-cols">
+              <div>
+                <h3 style="font-size: 0.96rem; margin-bottom: 0.35rem;">Mics Available</h3>
+                <ul class="gear-list">
+                  <li>Neumann: U87, M147, KM184.</li>
+                  <li>Tube royalty: Circle Audio EVO 251.</li>
+                  <li>The rare gem: custom-built LMI 251 (approx. $10k build).</li>
+                  <li>
+                    Dynamics: JZ Blackhole, JZ V67, RE20, plus a stack of assorted dynamics for any
+                    source.
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 style="font-size: 0.96rem; margin-bottom: 0.35rem;">Outboard Gear</h3>
+                <ul class="gear-list">
+                  <li>Preamp perfection: Avalon M5, Juicebox.</li>
+                  <li>Compressors: DBX 160SL w/ Weiss mod, Drawmer 1968 comp.</li>
+                  <li>Reverb &amp; FX: Bricasti M7, MasterMix XL305, Eventide DSP7000.</li>
+                  <li>The secret weapon: Handsome Audio Zulus.</li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="cta-inline" style="margin-top: 1.1rem;">
+              Need a specific chain for your session? Reach out in advance and we’ll tailor the
+              setup to your sound.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="banded" id="services">
+        <div class="container reveal-stagger">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">Studio Services</div>
+              <h2 class="section-title">Mixing &amp; Songwriting Camps</h2>
+            </div>
+            <p class="section-subtitle">
+              Bring us the stems or build it from scratch. From hourly bookings to full projects,
+              we’re set up for modern, professional releases.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <!-- Mixing -->
+            <div class="card">
+              <span class="tag">
+                <span class="tag-accent"></span>
+                Mixing Services
+              </span>
+              <h3>Mixing Services</h3>
+              <p>
+                Whether it's a single, EP, or full album, our engineers deliver mixes built for
+                streaming platforms, clubs, and everything in between.
+              </p>
+
+              <div class="pill-label">Rates</div>
+              <div class="price-row">
+                <div class="price-pill">
+                  <strong>$150/hr</strong> &nbsp;·&nbsp; Hourly rate
+                </div>
+              </div>
+
+              <p>
+                Need a fixed rate for a full project or multiple songs? Hit us with the stems and
+                we’ll provide a custom quote.
+              </p>
+              <p class="cta-inline">
+                We’re talking professional, release-ready mixes—tailored to your sound.
+              </p>
+            </div>
+
+            <!-- Songwriting camps -->
+            <div class="card">
+              <span class="tag">
+                <span class="tag-accent"></span>
+                Songwriting Camps
+              </span>
+              <h3>Songwriting Camps &amp; Creative Support</h3>
+              <p>
+                Build your next record with a full creative ecosystem behind you—from interns to
+                A-list collaborators.
+              </p>
+
+              <div class="pill-label">What’s Available</div>
+              <ul class="feature-list">
+                <li>Production Manager on deck.</li>
+                <li>Gooddays interns for extra assistance and runs.</li>
+                <li>Food catering coordination &amp; kitchen access.</li>
+                <li>Daily scheduling and room coordination.</li>
+                <li>
+                  Access to an exclusive network of Grammy-winning and nominated songwriters and
+                  producers.
+                </li>
+              </ul>
+
+              <p class="cta-inline">
+                Booking: please inquire within for all-inclusive block deals and custom packages.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AMENITIES -->
+      <section id="amenities">
+        <div class="container reveal-stagger">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">Amenities</div>
+              <h2 class="section-title">More than a studio.</h2>
+            </div>
+            <p class="section-subtitle">
+              A space designed for real sessions, long days, and the breaks in between.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="amenities-grid">
+              <div class="amenity-card">
+                <h4>Fully Equipped Kitchen</h4>
+                <p>
+                  Designed for private chefs, catering, and various other uses. Set your session up
+                  with proper food and hospitality.
+                </p>
+              </div>
+              <div class="amenity-card">
+                <h4>Bathrooms</h4>
+                <p>
+                  Two cozy, modernized bathrooms featuring toilets that adjust to your comfort—ideal
+                  for long days and late nights.
+                </p>
+              </div>
+              <div class="amenity-card">
+                <h4>Entertainment Space</h4>
+                <p>
+                  Includes professional boxing gear for guests who need a break from work or want to
+                  let off some steam between takes.
+                </p>
+              </div>
+              <div class="amenity-card">
+                <h4>Private Parking</h4>
+                <p>
+                  Dedicated parking is provided, emphasizing discretion and privacy for creatives
+                  working at the studio.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section>
+        <div class="container reveal">
+          <div class="card contact-card">
+            <div class="pill-label" style="margin-bottom: 0.4rem;">
+              Booking &amp; Inquiries
+            </div>
+            <h2 class="contact-title">Ready for your next Good Day?</h2>
+            <p class="contact-text">
+              Share a few details about your project, preferred dates, and what you’re looking to
+              book—studio time, the cyc wall, an event, or a full camp—and we’ll follow up with
+              availability and quotes.
+            </p>
+
+            <div class="contact-details">
+              <span>
+<!--                 <span class="icon-dot"></span>
+                <a href="tel:19175494765">917.549.4765</a> -->
+              </span>
+              <span>
+                <span class="icon-dot"></span>
+                <a href="mailto:hiroshima@thegooddays305.com">hiroshima@thegooddays305.com</a>
+              </span>
+              <span>
+                <span class="icon-dot"></span>
+                1761 NW 21st Terrace, Miami, FL 33142
+              </span>
+              <span>
+                <span class="icon-dot"></span>
+                <a
+                  href="https://www.instagram.com/TheGoodDays305"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >@TheGoodDays305</a
+                >
+              </span>
+            </div>
+
+            <a href="mailto:hiroshima@thegooddays305.com?subject=Booking%20-%20The%20Gooddays">
+              <button class="btn-primary">Email the Team</button>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <div>&copy; <span id="year"></span> The Gooddays 305. All rights reserved.</div>
+          <div class="footer-stripes">
+            <div class="footer-stripe"></div>
+            <div class="footer-stripe"></div>
+            <div class="footer-stripe"></div>
+            <div class="footer-stripe"></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Scroll reveal using IntersectionObserver
+    const revealElements = document.querySelectorAll(".reveal, .reveal-stagger");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // reveal once
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+      }
+    );
+
+    revealElements.forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
